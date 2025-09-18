@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Varsha - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="container">
+      <div class="logo">VARSHA B</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.pdf" download>Download Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm Varsha</h1>
+      <p>A recent graduate excited to start my journey in software development and contribute to real-world projects.</p>
+      <a href="#projects" class="cta-button">My Projects</a>
+      <a href="Varsha_resume.pdf" download class="cta-button">Download Resume</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="myimgg.jpeg" alt="Profile Picture" class="profile-img" />
+        <div class="about-text">
+          <p>I’m a graduate in Information Technology with a passion for building modern, responsive web applications. 
+            I have hands-on experience with HTML, CSS, JavaScript, React, and Python, and have developed projects that combine deep learning and IoT, including a smart maize disease detection system.
+            I enjoy turning ideas into functional, user-friendly digital solutions and continuously strive to learn and grow in the field of software development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend Development</h3>
+          <p>HTML, CSS, JavaScript, React</p>
+          <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+        </div>
+        <div class="skill-card">
+          <h3>Backend Development</h3>
+          <p>Python, Django, FastAPI</p>
+          <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+        </div>
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <p>Git, VS Code, Microsoft Office</p>
+          <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img">E-Commerce Platform</div>
+          <div class="project-content">
+            <h3>E-Commerce Website</h3>
+            <p>Created a simple cosmetic shopping webpage for browsing and buying products.</p>
+            <a href="https://varshabaskar2003.github.io/Cosmeticss/" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">MaizeCare-SensorNet</div>
+          <div class="project-content">
+            <h3>MaizeCare-SensorNet</h3>
+            <p>Developed a system to identify maize leaf diseases using deep learning and IoT sensor data.</p>
+            <a href="https://github.com/VarshaBaskar2003/project.git" class="project-link">View Source Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <div class="contact-content">
+        <p>I'm always open to new opportunities and collaborations. Feel free to reach out to me!</p>
+        
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="text" placeholder="Subject" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <hr>
+        <br>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <form>
+          <ul type="none">
+            
+            <li><strong>Email:</strong> <a href="mailto:varshab0109@gmail.com">varshab0109@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+916379866704">+91 6379866704</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/VarshaBaskar2003" target="_blank">github.com/VarshaBaskar2003</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/varsha-b-02288a531/" target="_blank">linkedin.com/in/varsha-b-02288a531</a></li>
+         </ul> </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Varsha.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
